@@ -1,0 +1,25 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "permission": {
+    "read": {
+      "*": "allow",
+      "prepare.py": "deny",
+      "autoquant/prepare.py": "deny",
+      "~/.cache/autoquant/**": "deny",
+    },
+    "edit": {
+      "*": "deny",
+      "trade.py": "allow",
+      "train.py": "allow",
+      "results.tsv": "allow",
+      "autoquant/trade.py": "allow",
+      "autoquant/train.py": "allow",
+      "autoquant/results.tsv": "allow"
+    },
+    "bash": {
+      "*": "allow",
+      "uv add*": "deny",
+      "uv pip*": "deny"
+    }
+  }
+}

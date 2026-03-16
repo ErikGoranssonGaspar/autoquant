@@ -1,0 +1,35 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv/
+
+# Cache directory (outside repo at ~/.cache/autoquant/)
+# Data files stored there, not in git
+
+results.tsv
+results_archive/
+
+# macOS system files
+.DS_Store
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log
+
+# Agent prompt files (if generated)
+CLAUDE.md
+AGENTS.md
+
+# Jupyter checkpoints (if notebooks added)
+.ipynb_checkpoints/

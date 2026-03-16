@@ -1,0 +1,15 @@
+[project]
+name = "autoquant"
+version = "0.1.0"
+description = "Autonomous quantitative trading strategy research"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "numpy>=1.24.0",
+    "pandas>=2.0.0",
+    "yfinance>=0.2.28",
+    "pyarrow>=14.0.0",
+    "ta-lib>=0.6.8",
+    "statsmodels>=0.14.6",
+    "scipy>=1.17.1",
+]
