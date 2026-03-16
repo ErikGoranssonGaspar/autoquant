@@ -82,57 +82,7 @@ def train(train_data: pd.DataFrame) -> Any:
     # Print diagnostics to understand patterns
     # Test different approaches quickly
 
-    # Explore data structure
-    print("=" * 60)
-    print("DATA EXPLORATION")
-    print("=" * 60)
-
-    print("\n1. DataFrame shape:", train_data.shape)
-    print("\n2. Index levels:", train_data.index.names)
-    print("\n3. Columns:", train_data.columns.tolist())
-    print("\n4. Data types:")
-    print(train_data.dtypes)
-
-    print("\n5. Date range:")
-    dates = train_data.index.get_level_values("date")
-    print(f"   Start: {dates.min()}")
-    print(f"   End: {dates.max()}")
-    print(f"   Total days: {len(dates.unique())}")
-
-    print("\n6. Tickers:")
-    tickers = train_data.index.get_level_values("ticker").unique()
-    print(f"   Count: {len(tickers)}")
-    print(f"   Sample: {list(tickers[:10])}")
-
-    print("\n7. Sample data (head):")
-    print(train_data.head(10))
-
-    print("\n8. Summary statistics:")
-    print(train_data.describe())
-
-    print("\n9. Missing values:")
-    print(train_data.isnull().sum())
-
-    # Get close prices in wide format
-    closes = train_data["close"].unstack("ticker")
-    print("\n10. Close prices shape (dates x tickers):", closes.shape)
-
-    # Calculate simple returns
-    returns = closes.pct_change().dropna()
-    print("\n11. Daily returns summary:")
-    print(f"    Mean return: {returns.mean().mean():.6f}")
-    print(f"    Std of returns: {returns.std().mean():.6f}")
-    print(f"    Best single day return: {returns.max().max():.4f}")
-    print(f"    Worst single day return: {returns.min().min():.4f}")
-
-    return {
-        "n_tickers": len(tickers),
-        "n_days": len(dates.unique()),
-        "date_range": (dates.min(), dates.max()),
-        "mean_daily_return": returns.mean().mean(),
-        "mean_volatility": returns.std().mean(),
-    }
-
+    return None
 
 if __name__ == "__main__":
     start_time = time.time()
