@@ -24,7 +24,8 @@ import numpy as np
 import pandas as pd
 import scipy
 import statsmodels.api as sm
-import talib
+import talib as ta
+import sklearn
 
 from prepare import run_backtest
 
