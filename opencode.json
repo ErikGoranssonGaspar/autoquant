@@ -4,7 +4,6 @@
     "read": {
       "*": "allow",
       "prepare.py": "deny",
-      "autoquant/prepare.py": "deny",
       "~/.cache/autoquant/**": "deny",
     },
     "edit": {
@@ -12,14 +11,12 @@
       "trade.py": "allow",
       "train.py": "allow",
       "results.tsv": "allow",
-      "autoquant/trade.py": "allow",
-      "autoquant/train.py": "allow",
-      "autoquant/results.tsv": "allow"
     },
     "bash": {
       "*": "allow",
-      "uv add*": "deny",
-      "uv pip*": "deny"
+      "uv add *": "deny",
+      "uv pip *": "deny",
+      "pip *": "deny"
     }
   }
 }
